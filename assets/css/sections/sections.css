@@ -40,9 +40,9 @@
   position: relative;
   z-index: 1;
   display: grid;
-  gap: 2.2rem;
+  gap: 1.4rem;
   align-items: center;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.3fr 0.7fr;
 }
 
 .eyebrow {
@@ -87,7 +87,8 @@
   margin-top: 1rem;
   color: var(--muted);
   font-size: 0.9rem;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
 }
 
 .about-grid {
