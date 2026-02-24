@@ -1,0 +1,54 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition-delay: var(--delay, 0s);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-05 {
+  --delay: 0.05s;
+}
+
+.delay-1 {
+  --delay: 0.1s;
+}
+
+.delay-15 {
+  --delay: 0.15s;
+}
+
+.delay-2 {
+  --delay: 0.2s;
+}
+
+.delay-25 {
+  --delay: 0.25s;
+}
+
+.w-86 {
+  width: 86%;
+}
+
+.w-88 {
+  width: 88%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
+}
