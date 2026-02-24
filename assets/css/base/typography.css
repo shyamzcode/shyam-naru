@@ -1,0 +1,13 @@
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+}
+
+h1 {
+  max-width: 18ch;
+  font-size: clamp(1.9rem, 4.5vw, 3.7rem);
+}

@@ -1,0 +1,73 @@
+@media (max-width: 920px) {
+  .nav-shell {
+    border-radius: 20px;
+  }
+
+  .hero {
+    padding-top: 9.2rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-panel {
+    justify-self: start;
+  }
+
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-nav {
+    top: 12px;
+  }
+
+  .nav-shell {
+    padding: 0.72rem;
+  }
+
+  .brand {
+    display: none;
+  }
+
+  .hero-copy p {
+    font-size: 0.98rem;
+  }
+
+  .profile-panel img {
+    height: 300px;
+  }
+
+  .section {
+    padding: 3.6rem 0;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .orb,
+  .reveal {
+    animation: none;
+    transition: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
