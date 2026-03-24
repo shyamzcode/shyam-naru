@@ -8,6 +8,9 @@
       name="description"
       content="Shyam Naru - Senior Software Developer based in Nashville, focused on modern web platforms and product engineering."
     />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
 
     <link href="assets/img/favicon.png" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
@@ -24,7 +27,18 @@
     <header class="site-nav" aria-label="Main navigation">
       <div class="nav-shell">
         <a class="brand" href="#home">Shyam Naru</a>
-        <nav class="nav-links">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          aria-label="Open menu"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+        <nav class="nav-links" id="site-menu">
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
