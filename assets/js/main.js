@@ -3,33 +3,39 @@
 
   const revealItems = document.querySelectorAll(".reveal");
   const yearEl = document.getElementById("year");
+  const siteNav = document.querySelector(".site-nav");
   const navShell = document.querySelector(".nav-shell");
+  const navBackdrop = document.querySelector(".nav-backdrop");
   const navToggle = document.querySelector(".nav-toggle");
   const navLinks = document.querySelector(".nav-links");
   const mobileNavQuery = window.matchMedia("(max-width: 600px)");
 
   const closeMenu = () => {
-    if (!navShell || !navToggle) {
+    if (!siteNav || !navShell || !navToggle) {
       return;
     }
 
+    siteNav.classList.remove("menu-open");
     navShell.classList.remove("menu-open");
+    document.body.classList.remove("nav-open");
     navToggle.setAttribute("aria-expanded", "false");
     navToggle.setAttribute("aria-label", "Open menu");
   };
 
   const openMenu = () => {
-    if (!navShell || !navToggle) {
+    if (!siteNav || !navShell || !navToggle) {
       return;
     }
 
+    siteNav.classList.add("menu-open");
     navShell.classList.add("menu-open");
+    document.body.classList.add("nav-open");
     navToggle.setAttribute("aria-expanded", "true");
     navToggle.setAttribute("aria-label", "Close menu");
   };
 
   const initMobileNav = () => {
-    if (!navShell || !navToggle || !navLinks) {
+    if (!siteNav || !navShell || !navToggle || !navLinks) {
       return;
     }
 
@@ -49,8 +55,12 @@
       });
     });
 
+    if (navBackdrop) {
+      navBackdrop.addEventListener("click", closeMenu);
+    }
+
     document.addEventListener("click", (event) => {
-      if (!navShell.classList.contains("menu-open")) {
+      if (!siteNav.classList.contains("menu-open")) {
         return;
       }
 
